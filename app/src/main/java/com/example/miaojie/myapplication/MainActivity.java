@@ -20,5 +20,11 @@ public class MainActivity extends UnityPlayerActivity {
         View view=mUnityPlayer.getView();
         LinearLayout linearLayout=findViewById(R.id.content);
         linearLayout.addView(view);
+        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                UnityPlayer.UnitySendMessage("GameObject","findCountry","");
+            }
+        });
     }
 }
